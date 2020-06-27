@@ -9,13 +9,15 @@ const initialState = {
 
 const reducer = (state =  initialState, {type, payload}) => {
 
+  let { counter, clicks } = state
+
   switch(type) {
     case 'INC':
-      return {...state, counter: state.counter + 1, clicks: state.clicks + 1}
+      return {...state, counter: counter + 1, clicks: clicks + 1}
     case 'DEC':
-      return {...state, counter: state.counter - 1, clicks: state.clicks + 1}
+      return {...state, counter: counter - 1, clicks: clicks + 1}
     case 'RND':
-      return {...state, counter: state.counter + payload, clicks: state.clicks + 1}
+      return {...state, counter: counter + payload, clicks: clicks + 1}
     default:
       return state
   }
