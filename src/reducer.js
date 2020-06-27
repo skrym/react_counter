@@ -2,7 +2,8 @@ const initialState = {
   counter: 0,
   clicks: 0,
   username: 'Mi',
-  updateAt: String(new Date())
+  updateAt: String(new Date()),
+  hello: 'hello'
 }
 
 
